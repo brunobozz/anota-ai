@@ -1,1 +1,11 @@
-<input #searchTerm type="text" (keyup)="search(searchTerm.value)" />
+<div class="f-group">
+  <input
+    class="input"
+    #searchTerm
+    type="text"
+    (keyup)="search(searchTerm.value)"
+  />
+  <button class="btn" (click)="search(searchTerm.value)">
+    <img src="./assets/find.png" alt="Find icon" />
+  </button>
+</div>

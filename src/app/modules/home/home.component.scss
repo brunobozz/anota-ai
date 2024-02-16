@@ -1,10 +1,20 @@
 .home {
+  &-filter {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    &-field {
+      width: 500px;
+      max-width: 100%;
+    }
+  }
   &-list {
     display: flex;
     justify-content: center;
     align-items: stretch;
+    flex-wrap: wrap;
     &-item {
-      margin: 10px;
+      margin: 0 10px 20px;
     }
   }
 }

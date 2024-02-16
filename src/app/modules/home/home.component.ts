@@ -32,12 +32,13 @@ export class HomeComponent implements OnInit {
   public filterList() {
     console.log('termo de busca: ' + this.searchTerm);
     if (this.searchTerm.trim() === '') {
-      this.filteredList = this.list; // Se a pesquisa estiver vazia, mostrar todos os itens
+      this.filteredList = this.list;
     } else {
       this.filteredList = this.list.filter((item: any) => {
         return (
-          item.title.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
-          item.description.toLowerCase().includes(this.searchTerm.toLowerCase())
+          item.title.toLowerCase().includes(this.searchTerm.toLowerCase()) 
+          // se quiser filtrar por description tbm.
+          // || item.description.toLowerCase().includes(this.searchTerm.toLowerCase())
         );
       });
     }

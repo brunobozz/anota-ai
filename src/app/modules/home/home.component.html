@@ -1,7 +1,10 @@
 <div class="home">
-  <shared-search-field
-    (callSearch)="setSearch($event)"
-  ></shared-search-field>
+  <div class="home-filter">
+    <shared-search-field
+      class="home-filter-field"
+      (callSearch)="setSearch($event)"
+    ></shared-search-field>
+  </div>
   <div class="home-list">
     <shared-card
       *ngFor="let item of filteredList"

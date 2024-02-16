@@ -19,3 +19,61 @@ body {
   background: #efefef;
   font-family: Arial, Helvetica, sans-serif;
 }
+
+//FORM STYLES
+.input {
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 0.8rem;
+  border: 1px solid #cccccc;
+  background-color: #ffffff;
+  border-radius: 3px;
+}
+
+.input:focus {
+  border-color: #3698de;
+  outline: none;
+}
+
+.f-group:has(> .input:focus) .btn {
+  border-color: #3698de;
+}
+
+.btn {
+  background-color: #ffffff;
+  padding: 6px 6px;
+  font-size: 0.8rem;
+  border: solid #cccccc 1px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.f-group {
+  display: flex;
+
+  .input,
+  .btn {
+    border-radius: 0;
+  }
+
+  :first-child {
+    -webkit-border-top-left-radius: 4px;
+    -webkit-border-bottom-left-radius: 4px;
+    -moz-border-radius-topleft: 4px;
+    -moz-border-radius-bottomleft: 4px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+  }
+
+  :last-child {
+    border-left: 0;
+    -webkit-border-top-right-radius: 4px;
+    -webkit-border-bottom-right-radius: 4px;
+    -moz-border-radius-to-right: 4px;
+    -moz-border-radius-botto-right: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
+}
