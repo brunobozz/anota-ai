@@ -31,8 +31,6 @@ export class SharedBadgeComponent implements OnInit {
   }
 
   getTypeObject() {
-    console.log(this.itemType);
     this.typeSelected = this.types.find((type) => type.id === this.itemType);
-    console.log(this.typeSelected);
   }
 }

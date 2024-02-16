@@ -1,5 +1,7 @@
 <div class="card">
-  <img class="card-close" src="./assets/close.svg" alt="Close button">
+  <div class="card-close">
+    <img src="./assets/close.svg" alt="Close button" (click)="deleteItem(id)" />
+  </div>
   <div class="card-img" style="background-image: url('{{ img }}');">
     <shared-badge [itemType]="type"></shared-badge>
   </div>

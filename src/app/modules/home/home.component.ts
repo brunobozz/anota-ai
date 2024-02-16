@@ -18,7 +18,10 @@ export class HomeComponent implements OnInit {
   private getList() {
     this.apiAnotaAi.getData('cardlist.json').subscribe((res: any) => {
       this.list = res;
-      console.log(res);
     });
+  }
+
+  public deleteCall(id: number) {
+    this.list = this.list.filter((item: any) => item.id !== id);
   }
 }

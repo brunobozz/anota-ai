@@ -21,7 +21,7 @@ export class ApiAnotaAiService {
     return this.http.delete(this.URL + endpoint + item);
   }
 
-  updateData(endpoint: string, data: any) {
+  public updateData(endpoint: string, data: any) {
     return this.http.put(this.URL + endpoint, data);
   }
 }
