@@ -1,0 +1,13 @@
+<div class="home">
+  <shared-search-field></shared-search-field>
+  <div class="home-list">
+    <shared-card
+      *ngFor="let item of list"
+      class="home-list-item"
+      [title]="item.title"
+      [description]="item.description"
+      [type]="item.type"
+      [img]="item.img"
+    ></shared-card>
+  </div>
+</div>

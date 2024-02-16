@@ -1,0 +1,10 @@
+.home {
+  &-list {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    &-item {
+      margin: 10px;
+    }
+  }
+}
