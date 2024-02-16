@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'shared-search-field',
@@ -6,9 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./shared-search-field.component.scss'],
 })
 export class SharedSearchFieldComponent {
-  public searchTerm = 'sdnsdndh sdh sdh';
+  @Output() callSearch = new EventEmitter<string>();
 
-  public callSearch(value: string) {
-    console.log(value);
+  public search(value: string) {
+    this.callSearch.emit(value);
   }
 }
